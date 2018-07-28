@@ -4,17 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <Button
         android:id="@+id/btnClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click Here" />
+        android:text="Tab activity" />
 
     <Button
         android:id="@+id/btnOpenActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click Open Here" />
+        android:text="Movie List Activity" />
 
     <TextView
         android:id="@+id/txtDisplay"

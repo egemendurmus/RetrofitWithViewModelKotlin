@@ -13,7 +13,7 @@ import retrofit2.Response
 class MoviewViewModel : ViewModel() {
 
     //this is the data that we will fetch asynchronously
-    private var categoryList: MutableLiveData<Array<MovieAppModel>>? = null
+    private var movieList: MutableLiveData<Array<MovieAppModel>>? = null
 
     //we will call this method to get the data
     //if the list is null
@@ -21,11 +21,11 @@ class MoviewViewModel : ViewModel() {
     //finally we will return the list
     val heroes: LiveData<Array<MovieAppModel>>
         get() {
-            if (categoryList == null) {
-                categoryList = MutableLiveData()
+            if (movieList == null) {
+                movieList = MutableLiveData()
                 loadMovies()
             }
-            return categoryList !!
+            return movieList !!
         }
 
 
@@ -36,7 +36,7 @@ class MoviewViewModel : ViewModel() {
         call.enqueue(object : Callback<Array<MovieAppModel>> {
             override fun onResponse(call: Call<Array<MovieAppModel>>, response: Response<Array<MovieAppModel>>) {
                 //finally we are setting the list to our MutableLiveData
-                categoryList!!.setValue(response.body())
+                movieList!!.setValue(response.body())
             }
             override fun onFailure(call: Call<Array<MovieAppModel>>, t: Throwable) {
 

@@ -9,7 +9,6 @@ import android.view.View
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import mobilfabrikator.kotlindenemeleri.R
-import mobilfabrikator.kotlindenemeleri.helper.DisplayProgressDialog
 import mobilfabrikator.kotlindenemeleri.helper.pDialog
 import mobilfabrikator.kotlindenemeleri.viewmodel.CategoryViewModel
 
@@ -22,9 +21,9 @@ class MainActivity : AppCompatActivity() {
 
 
         btnClick.setOnClickListener(View.OnClickListener {
-            DisplayProgressDialog(this)
-          //  callWebService()
-            callViewModel()
+            val intent = Intent(this, TabActivity::class.java)
+            startActivity(intent)
+
         })
 
         btnOpenActivity.setOnClickListener(View.OnClickListener {
@@ -42,8 +41,7 @@ class MainActivity : AppCompatActivity() {
     private fun callViewModel() {
 
         val model = ViewModelProviders.of(this).get<CategoryViewModel>(CategoryViewModel::class.java!!)
-        model.heroes.observe(this, Observer { heroList ->
-          //  println(heroList!!.categories!![0].title)
+        model.categories.observe(this, Observer { heroList ->
            if (pDialog != null && pDialog!!.isShowing()) {
                 pDialog.dismiss()
             }

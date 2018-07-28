@@ -10,9 +10,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.squareup.picasso.Picasso
 import mobilfabrikator.kotlindenemeleri.R
-import mobilfabrikator.kotlindenemeleri.model.secondModel.MovieAppModel
+import mobilfabrikator.kotlindenemeleri.model.ChannelProgramsResponse
 
-class MovieAdapter(activity: Activity, private val mMovieList: Array<MovieAppModel>?) : BaseAdapter() {
+class DailyProgramListAdapter(activity: Activity, private val mDailyProgramList: ArrayList<ChannelProgramsResponse>?) : BaseAdapter() {
 
     private val mInflater: LayoutInflater
 
@@ -22,11 +22,11 @@ class MovieAdapter(activity: Activity, private val mMovieList: Array<MovieAppMod
     }
 
     override fun getCount(): Int {
-        return mMovieList!!.size
+        return mDailyProgramList!!.size
     }
 
-    override fun getItem(position: Int): MovieAppModel {
-        return mMovieList!![position]
+    override fun getItem(position: Int): ChannelProgramsResponse {
+        return mDailyProgramList!!.get(position)
     }
 
     override fun getItemId(position: Int): Long {
@@ -41,8 +41,8 @@ class MovieAdapter(activity: Activity, private val mMovieList: Array<MovieAppMod
         val imageView = satirView.findViewById<View>(R.id.imageView) as ImageView
 
 
-        val kisi = mMovieList!![position]
-        textView.text = kisi.name
+        val kisi = mDailyProgramList!!.get(position)
+        textView.text = kisi.title
         Picasso.get()
                 .load("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg")
                 .into(imageView);

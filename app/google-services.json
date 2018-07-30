@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "8913189022",
+    "firebase_url": "https://kotlinprojelerim.firebaseio.com",
+    "project_id": "kotlinprojelerim",
+    "storage_bucket": "kotlinprojelerim.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8913189022:android:90bf753d3194c7d9",
+        "android_client_info": {
+          "package_name": "mobilfabrikator.kotlindenemeleri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8913189022-2o0618lrjdsjjjs9c0vh4mjiurknptjj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC56nFqQzw_6_D_-4Kt4olmptk6i54-ZrM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

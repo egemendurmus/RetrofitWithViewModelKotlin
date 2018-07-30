@@ -14,7 +14,6 @@ import mobilfabrikator.kotlindenemeleri.model.ChannelProgramsResponse
 import mobilfabrikator.kotlindenemeleri.model.ChannelResponse
 import mobilfabrikator.kotlindenemeleri.model.GlobalVariables
 import mobilfabrikator.kotlindenemeleri.ui.adapter.TabsPagerAdapter
-import mobilfabrikator.kotlindenemeleri.ui.fragments.DailyProgramListFragments
 import mobilfabrikator.kotlindenemeleri.viewmodel.ChannelViewModel
 
 
@@ -23,11 +22,8 @@ class TabActivity : AppCompatActivity() {
     private var tabLayout: TabLayout? = null
     private var viewPager: ViewPager? = null
     val pst = GlobalVariables()
-    val dpf = DailyProgramListFragments()
     var channelList = ChannelResponse().data
-
     val mAdapter = TabsPagerAdapter(supportFragmentManager)
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
